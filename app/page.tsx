@@ -9,9 +9,9 @@ export default function HomePage() {
 
       <Section
         id="about"
-        eyebrow="About AY-Global"
+        eyebrow="About Timeground"
         title="A modern holding company for bold ideas."
-        description="AY-Global is the strategic holding entity founded by Athul Yesudas, focused on building and backing products at the intersection of technology, emotions, and human experience."
+        description="Timeground is the strategic holding entity founded by Athul Yesudas, focused on building and backing products at the intersection of technology, emotions, and human experience."
       >
         <div className="grid gap-8 md:grid-cols-3 mt-8">
           <div className="space-y-2">
@@ -48,7 +48,7 @@ export default function HomePage() {
         id="ventures"
         eyebrow="Ventures"
         title="A growing ecosystem of products."
-        description="AY-Global operates as the umbrella for multiple independent ventures, each with its own identity but a shared standard of craft."
+        description="Timeground operates as the umbrella for multiple independent ventures, each with its own identity but a shared standard of craft."
       >
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <div className="border border-neutral-200 rounded-3xl p-6 hover:border-neutral-400 transition">
@@ -72,7 +72,7 @@ export default function HomePage() {
             <h3 className="text-lg font-semibold mb-2">AY Labs</h3>
             <p className="text-sm text-neutral-700 mb-4">
               A sandbox for creative experiments in AI, design, and digital
-              tools — built under AY-Global.
+              tools — built under Timeground.
             </p>
             <p className="text-xs text-neutral-500">
               Status: Concept & exploration
@@ -85,7 +85,7 @@ export default function HomePage() {
             </p>
             <h3 className="text-lg font-semibold mb-2">Athul Yesudas Holdings</h3>
             <p className="text-sm text-neutral-700 mb-4">
-              The parent structure behind AY-Global, designed for long-term
+              The parent structure behind Timeground, designed for long-term
               ownership, flexibility, and scale.
             </p>
             <p className="text-xs text-neutral-500">Status: Core entity</p>
@@ -97,7 +97,7 @@ export default function HomePage() {
         id="contact"
         eyebrow="Contact"
         title="Let’s build what’s next."
-        description="For collaborations, investments, or partnerships under AY-Global, reach out directly."
+        description="For collaborations, investments, or partnerships under Timeground, reach out directly."
       >
         <div className="mt-8 max-w-md space-y-4">
           <p className="text-sm text-neutral-700">
@@ -105,13 +105,13 @@ export default function HomePage() {
             later.
           </p>
           <a
-            href="mailto:hello@ay-global.com"
+            href="mailto:hello@timeground.com"
             className="inline-flex items-center justify-center rounded-full border border-neutral-900 px-5 py-2 text-sm font-medium hover:bg-neutral-900 hover:text-white transition"
           >
-            Email AY-Global
+            Email Timeground
           </a>
           <p className="text-xs text-neutral-500">
-            Example: hello@ay-global.com — update this once your domain email is
+            Example: hello@timeground.com — update this once your domain email is
             live.
           </p>
         </div>

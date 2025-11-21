@@ -15,7 +15,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            AY-GLOBAL HOLDINGS
+            TIMEGROUND HOLDINGS
           </motion.p>
 
           <motion.h1
@@ -33,7 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.18 }}
           >
-            AY-Global is a holding company by Athul Yesudas, built to host
+            Timeground is a holding company by Athul Yesudas, built to host
             products like Emotionverse and future ventures that blend emotional
             intelligence, technology, and minimal design.
           </motion.p>
@@ -67,13 +67,13 @@ export default function Hero() {
         >
           <div className="relative mx-auto max-w-sm rounded-[2rem] border border-neutral-200 bg-neutral-50 p-6 shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
             <div className="mb-6 flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-neutral-500">
-              <span>AY-Global Snapshot</span>
+              <span>Timeground Snapshot</span>
               <span>Est. 2025</span>
             </div>
             <div className="space-y-4 text-sm text-neutral-800">
               <div className="flex items-center justify-between">
                 <span>Core brand</span>
-                <span className="font-medium">AY-Global</span>
+                <span className="font-medium">Timeground</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>Flagship</span>

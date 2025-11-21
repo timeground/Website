@@ -9,8 +9,8 @@ import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AY-Global",
-  description: "AY-Global — A modern innovation and investment holding group by Athul Yesudas.",
+  title: "Timeground",
+  description: "Timeground — A modern innovation and investment holding group by Athul Yesudas.",
 };
 
 export default function RootLayout({

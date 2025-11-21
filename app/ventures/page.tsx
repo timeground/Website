@@ -14,14 +14,14 @@ const ventures = [
     role: "Exploration Studio",
     status: "Concept & early experiments",
     description:
-      "A playground for testing AI tools, creative utilities, and early prototypes under AY-Global.",
+      "A playground for testing AI tools, creative utilities, and early prototypes under Timeground.",
   },
   {
     name: "Athul Yesudas Holdings",
     role: "Core Holding Entity",
     status: "Operational",
     description:
-      "The legal & strategic structure that supports AY-Global and future ventures.",
+      "The legal & strategic structure that supports Timeground and future ventures.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function VenturesPage() {
     <Section
       id="ventures-page"
       eyebrow="Ventures"
-      title="The AY-Global ecosystem."
+      title="The Timeground ecosystem."
       description="Each venture is independent, but all share the same standard: calm, minimal, human-centered products."
       paddedTop
     >

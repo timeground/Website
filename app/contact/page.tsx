@@ -9,8 +9,8 @@ export default function ContactPage() {
     <Section
       id="contact-page"
       eyebrow="Contact"
-      title="Reach out to AY-Global."
-      description="For partnerships, collaborations, or business inquiries related to AY-Global or its ventures."
+      title="Reach out to Timeground."
+      description="For partnerships, collaborations, or business inquiries related to Timeground or its ventures."
       paddedTop
     >
       <div className="max-w-md space-y-6">
@@ -60,10 +60,10 @@ export default function ContactPage() {
           This form is currently static. Later, we can connect it to an email
           service or backend. You can also contact directly via{" "}
           <a
-            href="mailto:hello@ay-global.com"
+            href="mailto:hello@timeground.com"
             className="underline underline-offset-4"
           >
-            hello@ay-global.com
+            hello@timeground.com
           </a>
           .
         </p>

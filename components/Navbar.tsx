@@ -20,11 +20,11 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="h-7 w-7 rounded-2xl border border-neutral-300 flex items-center justify-center text-xs">
-            AY
+            TG
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-semibold tracking-[0.18em] uppercase">
-              AY-Global
+              Timeground
             </span>
             <span className="text-[10px] text-neutral-500 uppercase tracking-[0.25em]">
               Holdings
