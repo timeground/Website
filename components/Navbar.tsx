@@ -3,7 +3,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -14,6 +15,11 @@ const navItems = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/70 backdrop-blur-xl">
@@ -32,6 +38,7 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {navItems.map((item) => {
             const active = pathname === item.href;
@@ -54,7 +61,54 @@ export default function Navbar() {
             );
           })}
         </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="flex h-8 w-8 items-center justify-center rounded-full border border-neutral-200 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className="relative h-3 w-4">
+            <span
+              className={`absolute left-0 top-0 h-px w-full bg-neutral-900 transition-all duration-300 ${isOpen ? "top-1.5 rotate-45" : "top-0"
+                }`}
+            />
+            <span
+              className={`absolute left-0 top-1.5 h-px w-full bg-neutral-900 transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"
+                }`}
+            />
+            <span
+              className={`absolute left-0 top-3 h-px w-full bg-neutral-900 transition-all duration-300 ${isOpen ? "top-1.5 -rotate-45" : "top-3"
+                }`}
+            />
+          </div>
+        </button>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="overflow-hidden border-t border-neutral-200 bg-white md:hidden"
+          >
+            <div className="flex flex-col space-y-4 px-4 py-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-medium uppercase tracking-[0.16em] text-neutral-600"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

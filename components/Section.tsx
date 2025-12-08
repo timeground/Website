@@ -21,9 +21,8 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`border-b border-neutral-200 ${
-        paddedTop ? "pt-16 md:pt-20" : "pt-10 md:pt-14"
-      } pb-14 md:pb-20`}
+      className={`border-b border-neutral-200 ${paddedTop ? "pt-16 md:pt-20" : "pt-12 md:pt-16"
+        } pb-16 md:pb-24`}
     >
       <div className="mx-auto max-w-6xl px-4">
         <div className="max-w-2xl space-y-3">
