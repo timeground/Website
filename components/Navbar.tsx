@@ -21,9 +21,9 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
-  const handleScrollTop = (e?: React.MouseEvent) => {
-    if (pathname === "/") {
-      e?.preventDefault();
+  const handleScrollTop = (e: React.MouseEvent, targetHref: string) => {
+    if (pathname === targetHref) {
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
-        <Link href="/" className="flex items-center gap-2" onClick={handleScrollTop}>
+        <Link href="/" className="flex items-center gap-2" onClick={(e) => handleScrollTop(e, "/")}>
           <div className="h-7 w-7 rounded-2xl border border-neutral-300 flex items-center justify-center text-xs">
             TG
           </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={item.href === "/" ? handleScrollTop : undefined}
+                onClick={(e) => handleScrollTop(e, item.href)}
                 className="relative px-1 py-0.5"
               >
                 <span className="text-xs uppercase tracking-[0.16em] text-neutral-600">
@@ -107,9 +107,9 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => {
+                  onClick={(e) => {
                     setIsOpen(false);
-                    if (item.href === "/") handleScrollTop();
+                    handleScrollTop(e, item.href);
                   }}
                   className="text-sm font-medium uppercase tracking-[0.16em] text-neutral-600"
                 >
