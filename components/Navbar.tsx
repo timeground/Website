@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
@@ -32,14 +33,19 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
         <Link href="/" className="flex items-center gap-2" onClick={(e) => handleScrollTop(e, "/")}>
-          <div className="h-7 w-7 rounded-2xl border border-neutral-300 flex items-center justify-center text-xs">
-            TG
+          <div className="relative h-[25px] w-[25px]">
+            <Image
+              src="/timeground-icon.svg"
+              alt="Timeground Logo"
+              fill
+              className="object-contain"
+            />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-semibold tracking-[0.18em] uppercase">
+            <span className="text-sm font-semibold tracking-[0.20em] uppercase">
               Timeground
             </span>
-            <span className="text-[10px] text-neutral-500 uppercase tracking-[0.25em]">
+            <span className="text-[10px] text-[#666666] uppercase tracking-[0.40em]">
               Holdings
             </span>
           </div>

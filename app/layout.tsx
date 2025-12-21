@@ -11,6 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Timeground",
   description: "Timeground — A modern innovation and investment holding group by Athul Yesudas.",
+  icons: {
+    icon: [
+      { media: "(prefers-color-scheme: dark)", url: "/icon-white.svg", type: "image/svg+xml" },
+      { media: "(prefers-color-scheme: light)", url: "/icon-black.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
