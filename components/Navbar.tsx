@@ -32,8 +32,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
-        <Link href="/" className="flex items-center gap-2" onClick={(e) => handleScrollTop(e, "/")}>
-          <div className="relative h-[25px] w-[25px]">
+        <Link href="/" className="flex items-center gap-[1px]" onClick={(e) => handleScrollTop(e, "/")}>
+          <div className="relative h-[21px] w-[21px]">
             <Image
               src="/timeground-icon.svg"
               alt="Timeground Logo"
@@ -41,14 +41,9 @@ export default function Navbar() {
               className="object-contain"
             />
           </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-sm font-semibold tracking-[0.20em] uppercase">
-              Timeground
-            </span>
-            <span className="text-[10px] text-[#666666] uppercase tracking-[0.40em]">
-              Holdings
-            </span>
-          </div>
+          <span className="text-[20px] font-semibold tracking-[0.20em] uppercase leading-none">
+            IMEGROUND
+          </span>
         </Link>
 
         {/* Desktop Nav */}
